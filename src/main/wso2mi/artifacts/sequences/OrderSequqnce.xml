@@ -43,9 +43,11 @@
 			<respond/>
 		</default>
 	</switch>
-<log level="custom">
-                <property name="message" value="Order creation notification sent"/>
-            </log>    <call blocking="false">
+
+       <log level="custom">
+        <property name="message" value="Order creation notification sent"/>
+    </log>
+    <call blocking="false">
         <endpoint key="NotificationService"/>
 	</call>
 </sequence>
