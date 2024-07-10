@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/" name="hello" xmlns="http://ws.apache.org/ns/synapse">
-	<resource methods="GET" uri-template="/resource">
-		<inSequence>
-			
-			<log category="INFO" level="simple" description="entry point">
-				<property name="test" value="test"/>
-			</log>
-			 <payloadFactory media-type="json">
-                <format>{"Hello":"World"}</format>
-                <args/>
-            </payloadFactory>
-			 <respond/>
-		</inSequence>
-		<faultSequence>
-		</faultSequence>
-	</resource>
+	<resource methods="POST" uri-template="/orders">
+	<inSequence>
+		<log category="INFO" level="simple" description="entry point">
+			<property name="test" value="test" />
+		</log><sequence key="OrderSequqnce" description="main_order_sequence" />
+
+
+	</inSequence>
+	<faultSequence></faultSequence>
+</resource>
 </api>
 
