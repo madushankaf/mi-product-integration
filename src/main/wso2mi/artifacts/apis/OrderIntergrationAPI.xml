@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <api context="/orders" name="OrderIntergrationAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <api context="/" name="OrderIntergrationAPI" xmlns="http://ws.apache.org/ns/synapse">
      <resource methods="POST" uri-template="/orders">
 	<inSequence>
 		<log category="INFO" level="simple" description="entry point">
-			<property name="test" value="test" />
-		</log><sequence key="OrderSequqnce" description="main_order_sequence" />
+		</log><sequence key="OrderSequence" description="main_order_seq" />
 
 
 	</inSequence>
